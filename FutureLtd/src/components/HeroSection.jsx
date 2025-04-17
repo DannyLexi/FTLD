@@ -16,6 +16,27 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
+const testimonialsData = [
+  {
+    id: 1,
+    name: "Clara",
+    rating: 5,
+    text: "Future Professionals helped me land my dream job! The process was smooth and professional.",
+  },
+  {
+    id: 2,
+    name: "Yaw",
+    rating: 4,
+    text: "Great service and very responsive. I found the right candidate faster than I expected!",
+  },
+  {
+    id: 3,
+    name: "Kofi",
+    rating: 5,
+    text: "The team truly understands the needs of both employers and job seekers. Highly recommend!",
+  },
+];
+
 // Dummy job data
 const jobsData = [
   {
@@ -151,7 +172,7 @@ const HeroSection = () => {
             tailored recruitment solutions to suit your needs however specific they may be.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {[
               {
                 icon: <FaBriefcase />,
@@ -253,6 +274,28 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+      {/* CTA */}
+      <section className="bg-[#EEF0FA] py-12 px-4">
+  <div className="bg-[#212727] flex flex-col items-center text-center p-12 gap-4 max-w-2xl mx-auto rounded-lg shadow-md">
+    <span className="text-xs font-semibold text-green-400 tracking-widest">
+      GET STARTED TODAY
+    </span>
+    <h2 className="text-2xl font-bold text-white">
+      Find Your Perfect Match
+    </h2>
+    <p className="text-sm text-gray-300 max-w-md">
+      Ready to take the next step in your career or hire top talent?
+    </p>
+    <Link to="/signup">
+      <button className="bg-green-600 hover:bg-green-700 transition-colors duration-300 text-sm text-white px-4 py-2 rounded-md inline-flex items-center gap-1.5">
+        Sign me up <FaArrowRight size={16} />
+      </button>
+    </Link>
+  </div>
+</section>
+
+
+
     </>
   );
 };

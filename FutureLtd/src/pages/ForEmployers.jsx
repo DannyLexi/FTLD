@@ -1,4 +1,3 @@
-// src/pages/ForEmployers.jsx
 import React, { useState } from "react";
 
 const ForEmployers = ({ onAddJob }) => {
@@ -16,7 +15,7 @@ const ForEmployers = ({ onAddJob }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newJob = { ...formData, id: Date.now() };
-    onAddJob(newJob);
+    onAddJob(newJob); // Add the new job to the parent's state
     setFormData({ title: "", company: "", location: "", type: "Full-Time" });
     alert("Job posted successfully!");
   };
